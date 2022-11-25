@@ -14,7 +14,11 @@ cp qbert.nes ../$ROM
 cd ..
 
 echo "Updating CHR..."
-# ...
+dd if=chr/alphabet-eo.bin of="$ROM" conv=notrunc bs=1 seek=$((0x8F10))
+dd if=chr/alphabet-eo.bin of="$ROM" conv=notrunc bs=1 seek=$((0xAF10))
+dd if=chr/alphabet-eo.bin of="$ROM" conv=notrunc bs=1 seek=$((0xCF10))
+dd if=chr/alphabet-eo.bin of="$ROM" conv=notrunc bs=1 seek=$((0xCF60))
+dd if=chr/alphabet-eo-bg.bin of="$ROM" conv=notrunc bs=1 seek=$((0xCF10))
 
 echo "Generating patch..."
 $FLIPS -c -i "$ORIG" "$ROM" "$IPS"
