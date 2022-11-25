@@ -898,31 +898,31 @@ __8501:     .db <__8698, >__8698
             .db <__8d77, >__8d77
             .db <__8bc8, >__8bc8
             .db <__8e07, >__8e07
-            .db <__8e2e, >__8e2e
-            .db <__8e43, >__8e43
-            .db <__8e54, >__8e54
-            .db <__8e67, >__8e67
-            .db <__8e7c, >__8e7c
-            .db <__8e92, >__8e92
-            .db <__8ea7, >__8ea7
+            .db <Instructions1, >Instructions1
+            .db <Instructions2, >Instructions2
+            .db <Instructions3, >Instructions3
+            .db <Instructions4, >Instructions4
+            .db <Instructions5, >Instructions5
+            .db <Instructions6, >Instructions6
+            .db <Instructions7, >Instructions7
 
-__8601:     .db <__8ec0, >__8ec0
-            .db <__8ed4, >__8ed4
-            .db <__8ee9, >__8ee9
-            .db <__8ef9, >__8ef9
-            .db <__8f0e, >__8f0e
-            .db <__8f21, >__8f21
-            .db <__8f2d, >__8f2d
-            .db <__8f3d, >__8f3d
-            .db <__8f4d, >__8f4d
+__8601:     .db <Instructions8, >Instructions8
+            .db <Instructions9, >Instructions9
+            .db <Instructions10, >Instructions10
+            .db <Instructions11, >Instructions11
+            .db <Instructions12, >Instructions12
+            .db <Instructions13, >Instructions13
+            .db <Instructions14, >Instructions14
+            .db <Instructions15, >Instructions15
+            .db <Instructions16, >Instructions16
             .db <__8f60, >__8f60
             .db <__8f6c, >__8f6c
             .db <__8f78, >__8f78
             .db <__8f83, >__8f83
             .db <__ee92, >__ee92
             .db <__8f8f, >__8f8f
-            .db <__8fa9, >__8fa9
-            .db <__8fba, >__8fba
+            .db <PressStart, >PressStart
+            .db <PressStartMask, >PressStartMask
             .db <__8d9b, >__8d9b
             .db <__8dbf, >__8dbf
             .db <__8de3, >__8de3
@@ -1270,53 +1270,72 @@ __8e07:     .hex 20 63 b0 b1 b2 b3 b4 b5 b6 b7 b8 3f fd
             .hex 23 c0 f0 f0 f0 30 fd
             .hex 23 c8 0f 0f 0f 03 fe
 
-__8e2e:     ;           J  U  M  P     O  N     S  Q  U  A  R  E  S     T  O
-            .hex 20 c6 4a 55 4d 50 00 4f 4e 00 53 51 55 41 52 45 53 00 54 4f fe
+Instructions1:
+            ;           S  A  L  T  U     S  U  R     K  U  B  O  J  N     P  O  R
+            .hex 20 c6 53 41 4c 54 55 00 53 55 52 00 4b 55 42 4f 4a 4e 00 50 4f 52 fe
 
-__8e43:     ;           C  H  A  N  G  E     T  H  E  M     T  O
-            .hex 20 e6 43 48 41 4e 47 45 00 54 48 45 4d 00 54 4f fe
+Instructions2:
+            ;          SX  A  N GX  I     I  L  I  A  N     K  O  L  O  R  O   N
+            .hex 20 e6 f3 41 4e f1 49 00 49 4c 49 41 4e 00 4b 4f 4c 4f 52 4f 4e fe
 
-__8e54:     ;           T  H  E     T  A  R  G  E  T     C  O  L  O  R
-            .hex 21 06 54 48 45 00 54 41 52 47 45 54 00 43 4f 4c 4f 52 fe
+Instructions3:
+            ;           L  A UX  C  E  L  E
+            .hex 21 06 4c 41 f4 43 45 4c 45 00 00 fe
 
-__8e67:     ;           S  T  A  Y     O  N     P  L  A  Y  F  I  E  L  D  !
-            .hex 21 47 53 54 41 59 00 4f 4e 00 50 4c 41 59 46 49 45 4c 44 21 fe
+Instructions4:
+            ;           M  O  R  T  I  G  A     F  A  L  O     R  E  Z  U  L T  O  S
+            .hex 21 47 4d 4f 52 54 49 47 41 00 46 41 4c 4f 00 52 45 5a 55 4c 54 4f 53 fe
 
-__8e7c:     ;           J  U  M  P  I  N  G     O  F  F     R  E  S  U  L  T  S
-            .hex 21 67 4a 55 4d 50 49 4e 47 00 4f 46 46 00 52 45 53 55 4c 54 53 fe
+Instructions5:
+            ;           S  E     V  I     S  A  L  T  A  S     D  E     L  A
+            .hex 21 67 53 45 00 56 49 00 53 41 4c 54 41 53 00 44 45 00 4c 41 fe
 
-__8e92:     ;           I  N     A     F  A  T  A  L     P  L  U  M  M  E  T
-            .hex 21 87 49 4e 00 41 00 46 41 54 41 4c 00 50 4c 55 4d 4d 45 54 fe
+Instructions6:
+            ;           L  U  D  K  A  M  P  O     K  A  J     N  E     T  I  E
+            .hex 21 87 4c 55 44 4b 41 4d 50 4f 00 4b 41 4a 00 4e 45 00 54 49 45 fe
 
-__8ea7:     ;           U  N  L  E  S  S     A     D  I  S  K     I  S     T  H  E  R  E
-            .hex 21 a7 55 4e 4c 45 53 53 00 41 00 44 49 53 4b 00 49 53 00 54 48 45 52 45 fe
+Instructions7:
+            ;           E  S  T  A  S     D  I  S  K  O
+            .hex 21 a7 45 53 54 41 53 00 44 49 53 4b 4f fe
 
-__8ec0:     ;           A  V  O  I  D     A  L  L     O  B  J  E  C  T  S
-            .hex 21 e8 41 56 4f 49 44 00 41 4c 4c 00 4f 42 4a 45 43 54 53 fe
+Instructions8:
+            ;           E  V  I  T  U     O  B  J  E  K  T  O  J  N     K  A  J
+            .hex 21 e8 45 56 49 54 55 00 4f 42 4a 45 4b 54 4f 4a 4e 00 4b 41 4a fe
 
-__8ed4:     ;           A  N  D     C  R  E  A  T  U  R  E  S     T  H  A  T
-            .hex 22 08 41 4e 44 00 43 52 45 41 54 55 52 45 53 00 54 48 41 54 fe 
+Instructions9:
+            ;           B  E  S  T  O  J  N  ,     K  I  U  J     N  E
+            .hex 22 08 42 45 53 54 4f 4a 4e 2c 00 4b 49 55 4a 00 4e 45 fe
 
-__8ee9:     ;           A  R  E     N  O  T     G  R  E  E  N
-            .hex 22 28 41 52 45 00 4e 4f 54 00 47 52 45 45 4e fe
+Instructions10:
+            ;           E  S  T  A  S     V  E  R  D  A  J
+            .hex 22 28 45 53 54 41 53 00 56 45 52 44 41 4a fe
 
-__8ef9:     ;           U  S  E     S  P  I  N  N  I  N  G     D  I  S  K  S
-            .hex 22 69 55 53 45 00 53 50 49 4e 4e 49 4e 47 00 44 49 53 4b 53 fe
+Instructions11:
+            ;           R  A  J  D  U     D  I  S  K  O  N     P  O  R
+            .hex 22 69 52 41 4a 44 55 00 44 49 53 4b 4f 4e 00 50 4f 52 fe
 
-__8f0e:     ;           T  O     L  U  R  E     S  N  A  K  E     T  O
-            .hex 22 89 54 4f 00 4c 55 52 45 00 53 4e 41 4b 45 00 54 4f fe
+Instructions12:
+            ;           A  L  L  O  G  I     S  E  R  P  E  N  T  O  N     A  L
+            .hex 22 89 41 4c 4c 4f 47 49 00 53 45 52 50 45 4e 54 4f 4e 00 41 4c fe
 
-__8f21:     ;           H  I  S     D  E  A  T  H
-            .hex 22 a9 48 49 53 00 44 45 41 54 48 fe
+Instructions13:
+            ;           L  A     M  O  R  T  O
+            .hex 22 a9 4c 41 00 4d 4f 52 54 4f fe
 
-__8f2d:     ;           E  X  T  R  A     L  I  F  E     A  T
-            .hex 22 ea 45 58 54 52 41 00 4c 49 46 45 00 41 54 fe
+Instructions14:
+            ;           V  I     G  A  J  N  O  S     V  I  V  O  N     J  E
+            .hex 22 ea 56 49 00 47 41 4a 4e 4f 53 00 56 49 56 4f 4e 00 4a 45 fe
 
-__8f3d:     ;           6  0  0  0     A  N  D     E  A  C  H
-            .hex 23 0b 36 30 30 30 00 41 4e 44 00 45 41 43 48 fe
+Instructions15:
+            ;           6  0  0  0     P  O  E  N  T  O  J     K  A  J     P  O
+            .hex 23 0a 36 30 30 30 00 50 4f 45 4e 54 4f 4a 00 4b 41 4a 00 50 4f fe
 
-__8f4d:     ;           A  D  D  I  T  I  O  N  A  L     1  2  0  0  0
-            .hex 23 2a 41 44 44 49 54 49 4f 4e 41 4c 00 31 32 30 30 30 fe
+Instructions16:
+            ;           1  2  0  0  0     P  O  S  T  E
+            .hex 23 2a 31 32 30 30 30 00 50 4f 53 54 45 fe
+
+            ; 3 bytes
+            .pad $8f60
 
 __8f60:     .hex 21 02 16 fd
             .hex 21 22 17 fd
@@ -1335,10 +1354,12 @@ __8f8f:     ;           C  O  N  T  I  N  U  E     A
             ;           G  A  M  E     E  N  D     B
             .hex 21 cb 47 41 4d 45 00 45 4e 44 00 42 fe
 
-__8fa9:     ;           P  U  S  H     S  T  A  R  T     K  E  Y
-            .hex 20 8f df e0 e1 e2 00 e1 e3 e4 e5 e3 00 e6 e7 e8 fe
+PressStart:
+            ;           P  R  E  M  U     "  S  T  A  R  T  "
+            .hex 20 8f df e0 e1 e2 e3 00 e4 e5 e6 e7 e0 e6 e4 00 fe
 
-__8fba:     .hex 20 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 fe
+PressStartMask:
+            .hex 20 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 fe
 
 __8fcb:     .hex 3f 00 0f 05 11 2a 0f 28 11 2a 0f 31 11 2a 0f 26 02 00 0f 
             .hex 16 0f 20 0f 16 0f 28 0f 16 20 28 0f 14 0f 20 fe
