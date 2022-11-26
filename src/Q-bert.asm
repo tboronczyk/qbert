@@ -829,9 +829,9 @@ __8501:     .db <__8698, >__8698
             .db <__8991, >__8991
             .db <__89a4, >__89a4
             .db <__89b7, >__89b7
-            .db <__89ca, >__89ca
-            .db <__89d3, >__89d3
-            .db <__89dc, >__89dc
+            .db <PlayerRainbow1, >PlayerRainbow1
+            .db <PlayerRainbow2, >PlayerRainbow2
+            .db <PlayerRainbow3, >PlayerRainbow3
             .db <__89e5, >__89e5
             .db <__89ee, >__89ee
             .db <__89f7, >__89f7
@@ -844,7 +844,7 @@ __8501:     .db <__8698, >__8698
             .db <__8a5a, >__8a5a
             .db <__8a69, >__8a69
             .db <__8a78, >__8a78
-            .db <__8a87, >__8a87
+            .db <HUDLabels, >HUDLabels
             .db <__8aca, >__8aca
             .db <__8ad9, >__8ad9
             .db <__86af, >__86af
@@ -1073,14 +1073,16 @@ __89a4:     .hex 3f 00 0f 21 05 28 0f 01 05 28 0f 14 05 28 0f 16 2a 28 fe
 
 __89b7:     .hex 3f 00 0f 11 02 00 0f 24 02 00 0f 28 02 00 0f 16 2a 28 fe
 
-__89ca:     ;           P  L  A  Y  E  R  (rainbow 1)
-            .hex 20 62 2a 2b cc 2d cb 2f fe
+PlayerRainbow1:
+            ;           L  U  D  A  N  T  O
+            .hex 20 62 2b cb 2a cc 2f 2d ef fe
 
-__89d3:     ;           P  L  A  Y  E  R  (rainbow 2)
-            .hex 20 62 1e 1f 20 60 22 23 fe
+PlayerRainbow2:
+            ;           L  U  D  A  N  T  O
+            .hex 20 62 1f 22 1e 20 23 60 ed fe
 
-__89dc:     ;           P  L  A  Y  E  R  (rainbow 3)
-            .hex 20 62 24 25 26 27 cd ce fe
+            ; 8 bytes
+            .pad $89e5
 
 __89e5:     .hex 20 e3 1b 1b 08 10 1a 1a fe
 
@@ -1133,19 +1135,19 @@ __8a78:     ; circled level number (9)
             .hex 23 2f bb c9 fd
             .hex 23 4f ca bc fe
 
-__8a87:     ;           P  L  A  Y  E  R  1
+HUDLabels:  ;           P  L  A  Y  E  R  1
             .hex 20 62 2a 2b cc 2d cb 2f 28 fd
             ;           0  0  0  0  0  0  0
             .hex 20 82 30 30 30 30 30 30 30 fd
-            ;           C  H  A  N  G  E     T  O  :
-            .hex 20 a2 43 48 41 4e 47 45 00 54 4f 3a fd
+            ;          SX  A  N GX  I     A  L  :
+            .hex 20 a2 f3 41 4e f1 49 00 41 4c 3a fd
             .hex 20 c5 14 15 fd
             .hex 21 02 18 fd
             .hex 21 22 19 3d fd
-            ;           L  E  V  E  L  :  1
-            .hex 20 b7 4c 45 56 45 4c 3a 31 fd
-            ;           R  O  U  N  D  :  1
-            .hex 20 d7 52 4f 55 4e 44 3a 31 fe
+            ;           N  I  V  E  L  O  :  1
+            .hex 20 b6 4e 49 56 45 4c 4f 3a 31 fd
+            ;           E  T  A  P  O  :  1
+            .hex 20 d7 45 54 41 50 4f 3a 31 fe
 
 __8aca:     .hex 23 cb 55 55 fd
             .hex 23 d3 55 55 fd
@@ -1341,11 +1343,13 @@ Instructions16:
 
 __8f60:     .hex 21 02 16 fd
             .hex 21 22 17 fd
-            .hex 20 68 28 fe
+            ; (PLAYER)  1
+            .hex 20 69 28 fe
 
 __8f6c:     .hex 21 02 18 fd
             .hex 21 22 19 fd
-            .hex 20 68 29 fe
+            ; (PLAYER)  2
+            .hex 20 69 29 fe
 
 __8f78:     .hex 22 0d 00 00 00 00 00 00 00 00 fe
 
@@ -11816,6 +11820,10 @@ __f1d5:     .hex 00 20 7e 0b   ; $f1d5: 00 20 7e 0b   Data
             .hex 55 55 45 04   ; $f42f: 55 55 45 04   Data
             .hex 55 08 00 ff   ; $f433: 55 08 00 ff   Data
             .hex ff ff         ; $f437: ff ff         Data
+
+PlayerRainbow3:
+            ;           L  U  D  A  N  T  O
+            .hex 20 62 25 cd 24 26 ce 27 ee fe
 
             .pad $ffdd,$ff
 
