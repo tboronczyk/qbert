@@ -23,6 +23,7 @@ dd if=chr/level.bin of="$ROM" conv=notrunc bs=1 seek=$((0x8D80))
 dd if=chr/press-start.bin of="$ROM" conv=notrunc bs=1 seek=$((0xAE00))
 dd if=chr/end-finale.bin of="$ROM" conv=notrunc bs=1 seek=$((0xE160))
 dd if=chr/end-congratulations.bin of="$ROM" conv=notrunc bs=1 seek=$((0xE4E0))
+dd if=chr/end-dankon-d.bin of="$ROM" conv=notrunc bs=1 seek=$((0xE550))
 
 echo "Generating patch..."
 $FLIPS -c -i "$ORIG" "$ROM" "$IPS"

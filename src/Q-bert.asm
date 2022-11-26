@@ -930,7 +930,7 @@ __8601:     .db <Instructions8, >Instructions8
             .db <__8fee, >__8fee
             .db <__9001, >__9001
             .db <__9014, >__9014
-            .db <__9027, >__9027
+            .db <ThankYou, >ThankYou
             .db <__9036, >__9036
             .db <__eeb2, >__eeb2
             .db <__eed2, >__eed2
@@ -1370,8 +1370,8 @@ __9001:     .hex 3f 00 0f 20 11 2a 0f 05 11 2a 0f 31 11 2a 0f 26 02 00 fe
 
 __9014:     .hex 3f 00 0f 02 11 2a 0f 20 11 2a 0f 31 11 2a 0f 26 02 00 fe
 
-__9027:     ;              T  H  A  N  K     Y  O  U  !
-            .hex 22 4a 00 54 48 41 4e 4b 00 59 4f 55 21 00 fe
+ThankYou:   ;                 D  A  N  K  O  N  !  !
+            .hex 22 4a 00 00 54 41 4e 4b 4f 4e 21 21 00 00 fe
 
 __9036:     .hex 22 4a e5 e5 e5 e5 e5 e5 e5 e5 e5 e5 e5 e5 fe
 
