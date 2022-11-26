@@ -857,9 +857,9 @@ __8501:     .db <__8698, >__8698
             .db <__8ad9, >__8ad9
             .db <__8ad9, >__8ad9
             .db <__8ad9, >__8ad9
-            .db <__8649, >__8649
-            .db <__8654, >__8654
-            .db <__865f, >__865f
+            .db <GameOverPlayer1, >GameOverPlayer1
+            .db <GameOverPlayer2, >GameOverPlayer2
+            .db <GameOver, >GameOver
             .db <__8ae8, >__8ae8
             .db <__8afa, >__8afa
             .db <__8b0c, >__8b0c
@@ -920,7 +920,7 @@ __8601:     .db <Instructions8, >Instructions8
             .db <__8f78, >__8f78
             .db <__8f83, >__8f83
             .db <__ee92, >__ee92
-            .db <__8f8f, >__8f8f
+            .db <ContinueOrEnd, >ContinueOrEnd
             .db <PressStart, >PressStart
             .db <PressStartMask, >PressStartMask
             .db <__8d9b, >__8d9b
@@ -943,14 +943,16 @@ __8601:     .db <Instructions8, >Instructions8
             .db <__907b, >__907b
             .db <__908e, >__908e
 
-__8649:     ;           P  L  A  Y  E  R     1
-            .hex 21 4c 50 4c 41 59 45 52 00 31 fe
+GameOverPlayer1:
+            ;           L  U  D  A  N  T  O     1
+            .hex 21 4c 4c 55 44 41 4e 54 4f 00 31 fe
 
-__8654:     ;           P  L  A  Y  E  R     2
-            .hex 21 4c 50 4c 41 59 45 52 00 32 fe
+GameOverPlayer2:
+            ;           L  U  D  A  N  T  O     2
+            .hex 21 4c 4c 55 44 41 4e 54 4f 00 32 fe
 
-__865f:     ;           G  A  M  E        O  V  E  R
-            .hex 21 cb 47 41 4d 45 00 00 4f 56 45 52 fe
+GameOver:   ;              L  U  D  F  I  N  O
+            .hex 21 cc 00 4c 55 44 46 49 4e 4f fe
 
 __866c:     ;           G  A  M  E
             .hex 22 0e 47 41 4d 45 fe
@@ -1349,10 +1351,11 @@ __8f78:     .hex 22 0d 00 00 00 00 00 00 00 00 fe
 
 __8f83:     .hex 22 4d 00 00 00 00 00 00 00 00 00 fe
 
-__8f8f:     ;           C  O  N  T  I  N  U  E     A
-            .hex 21 4b 43 4f 4e 54 49 4e 55 45 00 41 fd
-            ;           G  A  M  E     E  N  D     B
-            .hex 21 cb 47 41 4d 45 00 45 4e 44 00 42 fe
+ContinueOrEnd:
+            ;           A     D  A UX  R  I  G  I
+            .hex 21 4c 41 00 44 41 f4 52 49 47 49 00 fd
+            ;           B     F  I  N  I
+            .hex 21 cc 42 00 46 49 4e 49 00 00 00 00 fe
 
 PressStart:
             ;           P  R  E  M  U     "  S  T  A  R  T  "
