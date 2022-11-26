@@ -11652,45 +11652,45 @@ __f12d:     .hex 00 20         ; $f12d: 00 20         Data
             .hex 7e 00
 
             ; $f133:
-            .hex 46 00
+            .hex 47 00
 
             ; $f135:
             ;       (c)    1  9  8  3     M  Y  L  S  T  A  R     E  L  E  C  T  R  O  N  I  C  S  ,
             .hex 9b 40 00 e9 ea eb ec 00 4d 59 4c 53 54 41 52 00 45 4c 45 43 54 52 4f 4e 49 43 53 2c
 
             ; $f151:
-            .hex 05 00
+            .hex 04 00
 
             ; $f153:
-            ;        I  N  C  .     A  L  L     R  I  G  H  T  S     R  E  S  E  R  V  E  D  .
-            .hex 99 49 4e 43 2e 00 41 4c 4c 00 52 49 47 48 54 53 00 52 45 53 45 52 56 45 44 2e
+            ;        I  N  C  .    CX  I  U  J     R  A  J  T  O  J     R  E  Z  E  R  V  I  T  A  J  .
+            .hex 9c 49 4e 43 2e 00 f0 49 55 4a 00 52 41 4a 54 4f 4a 00 52 45 5a 45 52 56 49 54 41 4a 2e
 
-            ; $f16d:
-            .hex 07 00
+            ; $f170:
+            .hex 05 00
 
-            ; $f16f:
-            ;        T  R  A  D  E  M  A  R  K     U  S  E     G  R  A  N  T  E  D     T  O
-            .hex 98 54 52 41 44 45 4d 41 52 4b 00 55 53 45 00 47 52 41 4e 54 45 44 00 54 4f
+            ; $f172:
+            ;        U  Z  O     D  E     V  A  R  M  A  R  K  O     D  O  N  I  T  A     A  L
+            .hex 99 55 5a 4f 00 44 45 00 56 41 52 4d 41 52 4b 4f 00 44 4f 4e 49 54 41 00 41 4c
 
-            ; $f188:
-            .hex 08 00
+            ; $f18c:
+            .hex 09 00
 
-            ; $f18a:
-            ;        K  O  N  A  M  I     U  N  D  E  R     L  I  C  E  N  S  E     F  R  O  M
-            .hex 99 4b 4f 4e 41 4d 49 00 55 4e 44 45 52 00 4c 49 43 45 4e 53 45 00 46 52 4f 4d
+            ; $f18f:
+            ;        K  O  N  A  M  I     S  U  B  L  I  C  E  N  C  E     D  E
+            .hex 95 4b 4f 4e 41 4d 49 00 53 55 42 4c 49 43 45 4e 43 45 00 44 45 00
 
-            ; $f1a4:
-            .hex 07 00
+            ; $f1a5:
+            .hex 0b 00
 
-            ; $f1a6:
+            ; $f1a7:
             ;        J  V  W     E  L  E  C  T  R  O  N  I  C  S  ,     I  N  C  .
             .hex 95 4a 56 57 00 45 4c 45 43 54 52 4f 4e 49 43 53 2c 00 49 4e 43 2e
 
-            .hex 7e 00 7e 00   ; $f1bc: 7e 00 7e 00   Data
+            .hex 7b 00 7e 00
             .hex 7e 00 7e 00   ; $f1c0: 7e 00 7e 00   Data
             .hex 84 00 00 0f   ; $f1c4: 84 00 00 0f   Data
             .hex 03 0b 00 81   ; $f1c8: 03 0b 00 81   Data
-            .hex f0 06 00 82   ; $f1cc: f0 06 00 82   Data
+            .hex 00 06 00 82
             .hex 0c 0f 19 00   ; $f1d0: 0c 0f 19 00   Data
             .hex ff            ; $f1d4: ff            Data
 __f1d5:     .hex 00 20 7e 0b   ; $f1d5: 00 20 7e 0b   Data
