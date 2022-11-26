@@ -777,9 +777,9 @@ __84fd:     lda #$00           ; $84fd: a9 00
             beq __84f4         ; $84ff: f0 f3     
 
 ;-------------------------------------------------------------------------------
-__8501:     .db <__8698, >__8698
-            .db <__86a3, >__86a3
-            .db <__867a, >__867a
+__8501:     .db <SelectPlayer1, >SelectPlayer1
+            .db <SelectPlayer2, >SelectPlayer2
+            .db <PlaySelect, >PlaySelect
             .db <__8688, >__8688
             .db <__86eb, >__86eb
             .db <__86c8, >__86c8
@@ -917,8 +917,8 @@ __8601:     .db <Instructions8, >Instructions8
             .db <Instructions16, >Instructions16
             .db <__8f60, >__8f60
             .db <__8f6c, >__8f6c
-            .db <__8f78, >__8f78
-            .db <__8f83, >__8f83
+            .db <SelectPlayer1Mask, >SelectPlayer1Mask
+            .db <SelectPlayer2Mask, >SelectPlayer2Mask
             .db <__ee92, >__ee92
             .db <ContinueOrEnd, >ContinueOrEnd
             .db <PressStart, >PressStart
@@ -969,8 +969,9 @@ __8688:     ;          ???    K  O  N  A  M  I     1  9  8  6
 __8698:     ;           1     P  L  A  Y  E  R
             .hex 22 0d 31 00 50 4c 41 59 45 52 fe
 
-__86a3:     ;           2     P  L  A  Y  E  R  S
-            .hex 22 4d 32 00 50 4c 41 59 45 52 53 fe
+SelectPlayer1:
+            ;           1     L  U  D  A  N  T  O
+            .hex 22 0d 31 00 4c 55 44 41 4e 54 4f fe
 
 __86af:     .hex 23 d0 cf f3 fd
             .hex 23 d8 0c 03 fd
@@ -1351,15 +1352,17 @@ __8f6c:     .hex 21 02 18 fd
             ; (PLAYER)  2
             .hex 20 69 29 fe
 
-__8f78:     .hex 22 0d 00 00 00 00 00 00 00 00 fe
+SelectPlayer1Mask:
+            .hex 22 0d 00 00 00 00 00 00 00 00 00 fe
 
-__8f83:     .hex 22 4d 00 00 00 00 00 00 00 00 00 fe
+SelectPlayer2Mask:
+            .hex 22 4d 00 00 00 00 00 00 00 00 00 00 fe
 
 ContinueOrEnd:
             ;           A     D  A UX  R  I  G  I
-            .hex 21 4c 41 00 44 41 f4 52 49 47 49 00 fd
+            .hex 21 4c 41 00 44 41 f4 52 49 47 49 fd
             ;           B     F  I  N  I
-            .hex 21 cc 42 00 46 49 4e 49 00 00 00 00 fe
+            .hex 21 cc 42 00 46 49 4e 49 00 00 00 fe
 
 PressStart:
             ;           P  R  E  M  U     "  S  T  A  R  T  "
@@ -3567,57 +3570,55 @@ __a45f:     .hex 00 20 6b 00   ; $a45f: 00 20 6b 00   Data
             .hex 36 00
 
             ; $a4ff:
-            ;        1     P  L  A  Y  E  R
-            .hex 88 31 00 50 4c 41 59 45 52
+            .hex 88 00 00 00 00 00 00 00 00
 
             ; $a508:
             .hex 38 00
 
             ; $a50a:
-            ;        2     P  L  A  Y  E  R  S
-            .hex 89 32 00 50 4c 41 59 45 52 53
+            .hex 89 00 00 00 00 00 00 00 00 00
 
             ; $a514:
-            .hex 33 00
+            .hex 34 00
 
             ; $a516:
-            ;        T  M     A  N  D       (c)       1  9  8  9
-            .hex 8f 54 4d 00 41 4e 44 00 00 40 00 00 e9 ea eb ea
+            ;        T  M     K  A  J    (c)    1  9  8  9
+            .hex 8d 54 4d 00 4b 41 4a 00 40 00 e9 ea eb ea
+
+            ; $a524:
+            .hex 0d 00
 
             ; $a526:
-            .hex 0c 00
-
-            ; $a528:
             ;        K  O  N  A  M  I     I  N  D  U  S  T  R  Y     C  O  .  ,  L  T  D  .
             .hex 98 4b 4f 4e 41 4d 49 00 49 4e 44 55 53 54 52 59 00 43 4f 2e 2c 4c 54 44 2e
 
-            ; $a541:
-            .hex 0f 00
-
-            ; $a543:
-            ;        L  I  C  E  N  S  E  D     B  Y
-            .hex 8b 4c 49 43 45 4e 53 45 44 00 42 59
-
-            ; $a54f:
+            ; $a53f:
             .hex 0e 00
 
-            ; $a551:
+            ; $a541:
+            ;        L  I  C  E  N  C  I  T  A     D  E
+            .hex 8c 4c 49 43 45 4e 43 49 54 41 00 44 45
+
+            ; $a54e:
+            .hex 0e 00
+
+            ; $a550:
             ;        N  I  N  T  E  N  D  O     O  F     A  M  E  R  I  C  A     I  N  C  .
             .hex 98 4e 49 4e 54 45 4e 44 4f 00 4f 46 00 41 4d 45 52 49 43 41 00 49 4e 43 2e
 
-            ; $a56a:
+            ; $a569:
             .hex 26 00
 
-            ; $a56c:
-            ;        U  L  T  R  A     G  A  M  E  S     I  S     A     R  E  G  I  S  T  E  R  E  D 
-            .hex 9b 55 4c 54 52 41 00 47 41 4d 45 53 00 49 53 00 41 00 52 45 47 49 53 54 45 52 45 44
+            ; $a56b:
+            ;        U  L  T  R  A     G  A  M  E  S     E  S  T  A  S     R  E  G  I  S  T  R  I  T  A
+            .hex 9c 55 4c 54 52 41 00 47 41 4d 45 53 00 45 53 54 41 53 00 52 45 47 49 53 54 52 49 54 41
 
             ; $a588:
-            .hex 05 00
+            .hex 04 00
 
             ; $a58a:
-            ;        T  R  A  D  E  M  A  R  K     O  F     U  L  T  R  A     S  O  F  T  W  A  R  E
-            .hex 9b 54 52 41 44 45 4d 41 52 4b 00 4f 46 00 55 4c 54 52 41 00 53 4f 46 54 57 41 52 45
+            ;        V  A  R  M  A  R  K  O     D  E     U  L  T  R  A     S  O  F  T  W  A  R  E
+            .hex 9b 56 41 52 4d 41 52 4b 4f 00 44 45 00 55 4c 54 52 41 00 53 4f 46 54 57 41 52 45 00
 
             ; $a5a6:
             .hex 05 00
@@ -11820,6 +11821,13 @@ __f1d5:     .hex 00 20 7e 0b   ; $f1d5: 00 20 7e 0b   Data
             .hex 55 55 45 04   ; $f42f: 55 55 45 04   Data
             .hex 55 08 00 ff   ; $f433: 55 08 00 ff   Data
             .hex ff ff         ; $f437: ff ff         Data
+
+PlaySelect: ;           E  L  E  K  T  U     L  U  D  T  I  P  O  N
+            .hex 21 c9 45 4c 45 4b 54 55 00 4c 55 44 54 49 50 4f 4e fe
+
+SelectPlayer2:
+            ;           2     L  U  D  A  N  T  O  J
+            .hex 22 4d 32 00 4c 55 44 41 4e 54 4f 4a fe
 
 PlayerRainbow3:
             ;           L  U  D  A  N  T  O
