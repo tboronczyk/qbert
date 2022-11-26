@@ -847,7 +847,7 @@ __8501:     .db <__8698, >__8698
             .db <HUDLabels, >HUDLabels
             .db <__8aca, >__8aca
             .db <__8ad9, >__8ad9
-            .db <__86af, >__86af
+            .db <Bonus, >Bonus
             .db <__8aca, >__8aca
             .db <__8ad9, >__8ad9
             .db <__8aca, >__8aca
@@ -11824,6 +11824,13 @@ __f1d5:     .hex 00 20 7e 0b   ; $f1d5: 00 20 7e 0b   Data
 PlayerRainbow3:
             ;           L  U  D  A  N  T  O
             .hex 20 62 25 cd 24 26 ce 27 ee fe
+
+Bonus:      .hex 23 d0 cf f3 fd
+            .hex 23 d8 0c 03 fd
+            ;           B  O  N  U  S  O
+            .hex 21 62 42 4f 4e 55 53 4f fd
+            ;           0  0  0  0
+            .hex 21 82 30 30 30 30 fe
 
             .pad $ffdd,$ff
 
