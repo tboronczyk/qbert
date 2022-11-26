@@ -11697,9 +11697,9 @@ __f1d5:     .hex 00 20 7e 0b   ; $f1d5: 00 20 7e 0b   Data
             .hex 0d 0b         ; $f1d9: 0d 0b         Data
 
             ; FINALE Banner
-            .hex 8a 14 15 16 17 18 18 19 1a 1b 1c
+            .hex 8a 14 15 16 17 18 18 19 1a 15 1c
             .hex 15 0b
-            .hex 8c 1d 1e 1f 20 60 22 23 24 25 26 27 28
+            .hex 8c 1d 1e 1f 20 1b 22 23 24 25 26 27 28
 
             .hex 10 0b 81 29   ; $f1f5: 10 0b 81 29   Data
             .hex 03 2a 8c 2b   ; $f1f9: 03 2a 8c 2b   Data
