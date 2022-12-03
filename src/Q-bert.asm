@@ -860,30 +860,30 @@ __8501:     .db <SelectPlayer1, >SelectPlayer1
             .db <GameOverPlayer1, >GameOverPlayer1
             .db <GameOverPlayer2, >GameOverPlayer2
             .db <GameOver, >GameOver
-            .db <__8ae8, >__8ae8
-            .db <__8afa, >__8afa
-            .db <__8b0c, >__8b0c
-            .db <__8b1e, >__8b1e
-            .db <__8b30, >__8b30
-            .db <__8b42, >__8b42
-            .db <__8b54, >__8b54
-            .db <__8b66, >__8b66
-            .db <__8b78, >__8b78
-            .db <__8b7d, >__8b7d
-            .db <__8b82, >__8b82
-            .db <__8b87, >__8b87
-            .db <__8b8c, >__8b8c
-            .db <__8b91, >__8b91
-            .db <__8b96, >__8b96
-            .db <__8b9b, >__8b9b
-            .db <__8ba0, >__8ba0
-            .db <__8ba5, >__8ba5
-            .db <__8baa, >__8baa
-            .db <__8baf, >__8baf
-            .db <__8bb4, >__8bb4
-            .db <__8bb9, >__8bb9
-            .db <__8bbe, >__8bbe
-            .db <__8bc3, >__8bc3
+            .db <ConfigMask1, >ConfigMask1
+            .db <ConfigMask2, >ConfigMask2
+            .db <ConfigMask3, >ConfigMask3
+            .db <ConfigMask4, >ConfigMask4
+            .db <ConfigMask5, >ConfigMask5
+            .db <ConfigMask6, >ConfigMask6
+            .db <ConfigMask7, >ConfigMask7
+            .db <ConfigMask8, >ConfigMask8
+            .db <ConfigAttr1, >ConfigAttr1
+            .db <ConfigAttr2, >ConfigAttr2
+            .db <ConfigAttr3, >ConfigAttr3
+            .db <ConfigAttr4, >ConfigAttr4
+            .db <ConfigAttr5, >ConfigAttr5
+            .db <ConfigAttr6, >ConfigAttr6
+            .db <ConfigAttr7, >ConfigAttr7
+            .db <ConfigAttr8, >ConfigAttr8
+            .db <ConfigAttr9, >ConfigAttr9
+            .db <ConfigAttr10, >ConfigAttr10
+            .db <ConfigAttr11, >ConfigAttr11
+            .db <ConfigAttr12, >ConfigAttr12
+            .db <ConfigAttr13, >ConfigAttr13
+            .db <ConfigAttr14, >ConfigAttr14
+            .db <ConfigAttr15, >ConfigAttr15
+            .db <ConfigAttr16, >ConfigAttr16
             .db <__8beb, >__8beb
             .db <__8c0f, >__8c0f
             .db <__8c33, >__8c33
@@ -1158,61 +1158,15 @@ __8ad9:     .hex 23 cb aa aa fd
             .hex 23 d3 aa aa fd
             .hex 23 db aa aa fe
 
-__8ae8:     .hex 20 90 00 00 00 00 20 00 fd
-            .hex 20 b0 15 15 15 15 21 15 fe
+            ; ($8ae8) original starting location for ConfigMasks
 
-__8afa:     .hex 20 d6 22 23 23 23 24 17 fd
-            .hex 20 f6 3c 3e 3e 3e 3f 06 fe
+            ; 144 bytes
+            pad $8b78
 
-__8b0c:     .hex 21 16 61 62 62 62 63 06 fd
-            .hex 21 36 64 65 65 65 66 06 fe
+            ; ($8b78) original starting location for ConfigAttrs
 
-__8b1e:     .hex 21 56 67 68 69 68 6a 06 fd
-            .hex 21 76 6b 6c 6d 6c 6e 06 fe
-
-__8b30:     .hex 21 90 06 06 06 06 06 06 fd
-            .hex 21 b0 1b 1b 1b 1b 1b 1b fe
-
-__8b42:     .hex 21 4a 00 00 00 00 18 06 fd
-            .hex 21 6a 00 00 00 00 18 06 fe
-
-__8b54:     .hex 21 0a 00 00 00 00 18 06 fd
-            .hex 21 2a 00 00 00 00 18 06 fe
-
-__8b66:     .hex 20 ca 00 00 00 00 16 17 fd
-            .hex 20 ea 00 00 00 00 18 06 fe
-
-__8b78:     .hex 23 cc 00 00 fe
-
-__8b7d:     .hex 23 cd 00 00 fe
-
-__8b82:     .hex 23 d5 00 00 fe
-
-__8b87:     .hex 23 d5 00 00 fe
-
-__8b8c:     .hex 23 dc 00 00 fe
-
-__8b91:     .hex 23 d2 01 00 fe
-
-__8b96:     .hex 23 d2 01 00 fe
-
-__8b9b:     .hex 23 ca 15 00 fe
-
-__8ba0:     .hex 23 cc 0f 03 fe
-
-__8ba5:     .hex 23 cd c0 f0 fe
-
-__8baa:     .hex 23 d5 0c 0f fe
-
-__8baf:     .hex 23 d5 c0 f0 fe
-
-__8bb4:     .hex 23 dc 0f 03 fe
-
-__8bb9:     .hex 23 d2 c1 f0 fe
-
-__8bbe:     .hex 23 d2 0d 0f fe
-
-__8bc3:     .hex 23 ca d5 f0 fe
+            ; 80 bytes
+            pad $8bc8
 
 __8bc8:     .hex 3f 00 0f 20 00 19 0f 12 27 37 0f 36 11 16 0f 36 26 20
             .hex 0f 16 0f 20 0f 1a 0f 20 0f 36 0f 16 0f 36 0f 20 fe
@@ -1236,36 +1190,34 @@ __8c9f:     .hex 23 2d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
             .hex 23 4d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
 
 __8cc3:     .hex 22 ad 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
-            ;              T  H  I  S     C  O  N  T  R  O  L
-            .hex 22 cd 06 54 48 49 53 06 43 4f 4e 54 52 4f 4c 06 06 fe
+            ;             CX  U     L  A     J  E  N  A
+            .hex 22 cd 06 f0 55 06 4c 41 06 4a 45 4e 41 06 06 06 06 fe
 
-__8ce7:     ;                                         O  K  ?
-            .hex 22 ed 06 06 06 06 06 06 06 06 06 06 4f 4b 5c 06 06 fd
-            .hex 23 0d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
+__8ce7:     ;              A  G  O  R  D  O     E  S  T  A  S
+            .hex 22 ed 06 41 47 4f 52 44 4f 06 45 53 54 41 53 06 06 fd
+            ;              B  O  N  A  ?
+            .hex 23 0d 06 42 4f 4e 41 5c 06 06 06 06 06 06 06 06 06 fe
 
-__8d0b:     ;                                   A  -  Y  E  S
-            .hex 23 2d 06 06 06 06 06 06 06 06 41 5d 59 45 53 06 06 fd
-            ;                                   B  -  N     O
-            .hex 23 4d 06 06 06 06 06 06 06 06 42 5d 4e 06 4f 06 06 fe
+__8d0b:     .hex 23 2d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
+            ;              A     J  E  S              B     N  E
+            .hex 23 4d 06 41 06 4a 45 53 06 06 06 06 42 06 4e 45 06 fe
 
 __8d2f:     .hex 22 ad 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
-            ;              T  H  I  S     O  N  E  ?
-            .hex 22 cd 06 54 48 49 53 06 4f 4e 45 5c 06 06 06 06 06 fe 
+            ;             CX  U    CX  I     T  I  E  L  ?
+            .hex 22 cd 06 f0 55 06 f0 49 06 54 49 45 4c 5c 06 06 06 fe
 
 __8d53:     .hex 22 ed 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
             .hex 23 0d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
 
-__8d77:     ;                                   A  -  Y  E  S
-            .hex 23 2d 06 06 06 06 06 06 06 06 41 5d 59 45 53 06 06 fd
-            ;                                   B  -  N     O
-            .hex 23 4d 06 06 06 06 06 06 06 06 42 5d 4e 06 4f 06 06 fe
+__8d77:     .hex 23 2d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
+            ;              A     J  E  S              B     N  E
+            .hex 23 4d 06 41 06 4a 45 53 06 06 06 06 42 06 4e 45 06 fe
 
 __8d9b:     .hex 22 ad 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
             .hex 22 cd 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
 
-__8dbf:     ;              O  K  ,  L  E  T  '  S     G  O  !
-            .hex 22 ed 06 4f 4b 2c 4c 45 54 5e 53 06 47 4f 60 06 06 fd
-            .hex 23 0d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
+__8dbf:     ;              B  O  N  E  ,     E  K  !
+            .hex 22 ed 06 42 4f 4e 45 2c 06 45 4b 60 06 06 06 06 06 fe
 
 __8de3:     .hex 23 2d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fd
             .hex 23 4d 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 fe
@@ -3640,16 +3592,19 @@ __a45f:     .hex 00 20 6b 00   ; $a45f: 00 20 6b 00   Data
             .hex 55 00 44 06   ; $a5dd: 55 00 44 06   Data
             .hex 55 81 11 08   ; $a5e1: 55 81 11 08   Data
             .hex 00 ff         ; $a5e5: 00 ff         Data
-__a5e7:     .hex 00 20 14 00   ; $a5e7: 00 20 14 00   Data
-            .hex 81 20 1f 00   ; $a5eb: 81 20 1f 00   Data
-            .hex 81 20 1f 00   ; $a5ef: 81 20 1f 00   Data
-            .hex 81 20 0e 00   ; $a5f3: 81 20 0e 00   Data
+__a5e7:     .hex 00 20
+            .hex 15 00
+            .hex 1f 00
+            .hex 81 20
+            .hex 1f 00
+            .hex 81 20
+            .hex 0d 00
 
-            ; $a5f7
-            ;        P  L  A  Y  E  R
-            .hex 86 80 7c 71 89 75 82
+            ;        L  U  D  A  N  T  O
+            .hex 88 7c 85 74 71 7e 84 7f 00
 
-            .hex 0b 00 81 20   ; $a5fe: 0b 00 81 20   Data
+            .hex 0a 00
+            .hex 81 20
             .hex 1f 00 81 20   ; $a602: 1f 00 81 20   Data
             .hex 19 00 81 14   ; $a606: 19 00 81 14   Data
             .hex 05 15 81 21   ; $a60a: 05 15 81 21   Data
@@ -3759,10 +3714,13 @@ __a5e7:     .hex 00 20 14 00   ; $a5e7: 00 20 14 00   Data
             .hex 00 83 40 50   ; $a7aa: 00 83 40 50   Data
             .hex 10 05 00 83   ; $a7ae: 10 05 00 83   Data
             .hex 04 55 01 04   ; $a7b2: 04 55 01 04   Data
-            .hex 00 84 f0 44   ; $a7b6: 00 84 f0 44   Data
-            .hex 55 11 05 00   ; $a7ba: 55 11 05 00   Data
-            .hex 08 a5 10 aa   ; $a7be: 08 a5 10 aa   Data
-            .hex 08 0a ff      ; $a7c2: 08 0a ff      Data
+            .hex 00            ; $a7b6: 00            Data
+
+            .hex 84 00 44 55 11
+
+            .hex 05 00 08 a5   ; $a7bc: 05 00 08 a5   Data
+            .hex 10 aa 08 0a   ; $a7c0: 10 aa 08 0a   Data
+            .hex ff            ; $a7c4: ff            Data
 
 ;-------------------------------------------------------------------------------
 __a7c5:     ldx #$02           ; $a7c5: a2 02     
@@ -10732,28 +10690,30 @@ __e918:     lda $2d            ; $e918: a5 2d
             clc                ; $e91a: 18        
             adc #$53           ; $e91b: 69 53     
             jsr __84a1         ; $e91d: 20 a1 84  
-            lda #$06           ; $e920: a9 06     
+            lda #$0a           ; $e920: a9 06     
             sta $01            ; $e922: 85 01     
-            lda $2e            ; $e924: a5 2e     
-            asl                ; $e926: 0a        
+            jmp ConfigLabelsIdx
+;            lda $2e            ; $e924: a5 2e     
+;            asl                ; $e926: 0a        
             asl                ; $e927: 0a        
             sta $00            ; $e928: 85 00     
             asl                ; $e92a: 0a        
             clc                ; $e92b: 18        
             adc $00            ; $e92c: 65 00     
+ConfigLabelsIdxEnd:
             tay                ; $e92e: a8        
             lda $1e            ; $e92f: a5 1e     
             sec                ; $e931: 38        
-            sbc #$11           ; $e932: e9 11     
+            sbc #$19           ; $e932: e9 11     
             tax                ; $e934: aa        
             jsr __e940         ; $e935: 20 40 e9  
             inx                ; $e938: e8        
             inx                ; $e939: e8        
             inx                ; $e93a: e8        
             inx                ; $e93b: e8        
-            lda #$06           ; $e93c: a9 06     
+            lda #$0a           ; $e93c: a9 06     
             sta $01            ; $e93e: 85 01     
-__e940:     lda __e97d,y       ; $e940: b9 7d e9  
+__e940:     lda ConfigLabels,y
             sta $0300,x        ; $e943: 9d 00 03  
             inx                ; $e946: e8        
             iny                ; $e947: c8        
@@ -10782,20 +10742,10 @@ __e96d:     .hex 08 09 01 05   ; $e96d: 08 09 01 05   Data
 __e975:     .hex 46 47 48 49   ; $e975: 46 47 48 49   Data
             .hex 4a 4b 4c 4d   ; $e979: 4a 4b 4c 4d   Data
 
-__e97d:     ;     U  P              R  I  G  H  T
-            .hex 85 80 00 00 00 00 82 79 77 78 84 00
+            ; ($e97d) original location for ConfigLabels
 
-            ; $e989:
-            ;     D  O  W  N        R  I  G  H  T
-            .hex 74 7f 87 7e 00 00 82 79 77 78 84 00
-
-            ; $e995:
-            ;     D  O  W  N        L  E  F  T
-            .hex 74 7f 87 7e 00 00 7c 75 76 84 00 00
-
-            ; $e9a1:
-            ;     U  P              L  E  F  T
-            .hex 85 80 00 00 00 00 7c 75 76 84 00 00
+            ; 48 bytes
+            .pad $e9ad
 
 __e9ad:     .hex 01 04 03 02   ; $e9ad: 01 04 03 02   Data
             .hex 02            ; $e9b1: 02            Data
@@ -11839,6 +11789,124 @@ Bonus:      .hex 23 d0 cf f3 fd
             .hex 21 62 42 4f 4e 55 53 4f fd
             ;           0  0  0  0
             .hex 21 82 30 30 30 30 fe
+
+ConfigLabels:
+            ;     D  E  K  S  T  R  E
+            .hex 74 75 7b 83 84 82 75 00 00 00
+            ;     S  U  P  R  E  N
+            .hex 83 85 80 82 75 7e 00 00 00 00
+
+            ;     D  E  K  S  T  R  E
+            .hex 74 75 7b 83 84 82 75 00 00 00
+            ;     M  A  L  S  U  P  R  E  N
+            .hex 7d 71 7c 83 85 80 82 75 7e 00
+
+            ;     M  A  L  D  E  K  S  T  R  E
+            .hex 7d 71 7c 74 75 7b 83 84 82 75
+            ;     M  A  L  S  U  P  R  E  N
+            .hex 7d 71 7c 83 85 80 82 75 7e 00
+
+            ;     M  A  L  D  E  K  S  T  R  E
+            .hex 7d 71 7c 74 75 7b 83 84 82 75
+            ;     S  U  P  R  E  N
+            .hex 83 85 80 82 75 7e 00 00 00 00
+
+ConfigMask1:
+            .hex 20 90 00 00 00 00 20 00 00 00 00 00 fd
+            .hex 20 b0 15 15 15 15 21 15 15 15 15 15 fe
+
+ConfigMask2:
+            .hex 20 d6 22 23 23 23 24 17 17 17 17 17 fd
+            .hex 20 f6 3c 3e 3e 3e 3f 06 06 06 06 06 fe
+
+ConfigMask3:
+            .hex 21 16 61 62 62 62 63 06 06 06 06 06 fd
+            .hex 21 36 64 65 65 65 66 06 06 06 06 06 fe
+
+ConfigMask4:
+            .hex 21 56 67 68 69 68 6a 06 8e 8f 8e 8f fd
+            .hex 21 76 6b 6c 6d 6c 6e 06 90 91 90 91 fe
+
+ConfigMask5:
+            .hex 21 90 06 06 06 06 06 06 6f 70 70 70 fd
+            .hex 21 b0 1b 1b 1b 1b 1b 1b 1b 1b 1b 1b fe
+
+ConfigMask6:
+            .hex 21 4a 00 00 00 00 18 06 06 35 36 37 fd
+            .hex 21 6a 00 00 00 00 18 06 06 06 39 3b fe
+
+ConfigMask7:
+            .hex 21 06 0b 0b 06 1c 00 00 00 00 18 06 fd
+            .hex 21 26 09 0a 10 11 00 00 00 00 18 06 fe
+
+ConfigMask8:
+            .hex 20 ca 00 00 00 00 16 17 17 17 17 17 fd
+            .hex 20 ea 00 00 00 00 18 06 06 06 25 26 fe
+
+ConfigAttr1:
+            .hex 23 cc 00 00 00 fe
+
+ConfigAttr2:
+            .hex 23 cd 00 00 00 fe
+
+ConfigAttr3:
+            .hex 23 d5 00 00 00 fe
+
+ConfigAttr4:
+            .hex 23 d5 00 00 00 fe
+
+ConfigAttr5:
+            .hex 23 dc 00 00 00 fe
+
+ConfigAttr6:
+            .hex 23 d2 01 00 00 fe
+
+ConfigAttr7:
+            .hex 23 d1 51 00 00 fe
+
+ConfigAttr8:
+            .hex 23 ca 15 00 00 fe
+
+ConfigAttr9:
+            .hex 23 cc 0f 0f 03 fe
+
+ConfigAttr10:
+            .hex 23 cd c0 f0 f0 fe
+
+ConfigAttr11:
+            .hex 23 d5 0c 0f 0f fe
+
+ConfigAttr12:
+            .hex 23 d5 c0 f0 f0 fe
+
+ConfigAttr13:
+            .hex 23 dc 0f 0f 03 fe
+
+ConfigAttr14:
+            .hex 23 d2 c0 f0 f0 fe
+
+ConfigAttr15:
+            .hex 23 d1 5d 0f 0f fe
+
+ConfigAttr16:
+            .hex 23 ca d5 f0 f0 fe
+
+ConfigLabelsIdx:
+            lda $2e
+            cmp #01
+            beq IdxOffset1
+            cmp #02
+            beq IdxOffset2
+            cmp #03
+            beq IdxOffset3
+            lda #$00
+            jmp ConfigLabelsIdxEnd
+IdxOffset1: lda #$14
+            jmp ConfigLabelsIdxEnd
+IdxOffset2: lda #$28
+            jmp ConfigLabelsIdxEnd
+IdxOffset3: lda #$3C
+            jmp ConfigLabelsIdxEnd
 
             .pad $ffdd,$ff
 
